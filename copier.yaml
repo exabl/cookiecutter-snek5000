@@ -21,5 +21,13 @@ description:
   type: str
   help: Briefly describe the solver.
 
+ci:
+    type: str
+    help: What Continuous Integration service do you want to use?
+    choices:
+        GitHub CI: github
+        None: none
+    default: github
+
 _jinja_extensions:
   - jinja2_time.TimeExtension
