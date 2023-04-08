@@ -36,3 +36,14 @@ ci:
 
 _jinja_extensions:
   - jinja2_time.TimeExtension
+
+_exclude:
+  - "copier.yaml"
+  - "~*"
+  - "*.py[co]"
+  - "__pycache__"
+  - ".git"
+  - ".gitignore"
+  - ".DS_Store"
+  - "license.txt"
+  - "readme.md"
