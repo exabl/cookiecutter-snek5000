@@ -21,6 +21,5 @@ description:
   type: str
   help: Briefly describe the solver.
 
-year:
-  type: int
-  help: Which year was the project created?
+_jinja_extensions:
+  - jinja2_time.TimeExtension
