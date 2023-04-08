@@ -17,6 +17,13 @@ dependencies = [
     "snek5000 >= 0.9.0"
 ]
 
+[project.optional-dependencies]
+tests = [
+    "nox",
+    "pytest",
+    "pytest-cov"
+]
+
 [project.entry-points."snek5000.solvers"]
 {{short_name}} = "{{package_name}}.solver"
 
@@ -25,3 +32,28 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 {{package_name}} = ["*.usr.f", "*.par.cfg", "Snakefile", "etc/*.yml"]
+
+[tool.coverage.run]
+source = ["{{package_name}}", "./tests"]
+data_file = ".coverage/coverage"
+omit = [
+    "*/try_*.py",
+    "*/_old_*.py",
+    "tests/test_slow_*.py",
+]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    "if __name__ == .__main__.:",
+    'if "sphinx" in sys.modules:',
+    "raise ValueError",
+    "raise NotImplementedError",
+    "except KeyError:",
+    "except ImportError:",
+    "except AttributeError:",
+    "except NotImplementedError:"
+]
+
+[tool.coverage.html]
+directory = ".coverage/html"
