@@ -21,6 +21,11 @@ description:
   type: str
   help: Briefly describe the solver.
 
+kth_framework:
+  type: bool
+  help: Would you like to use KTH framework for statistics and other features?
+  default: false
+
 ci:
     type: str
     help: What Continuous Integration service do you want to use?
