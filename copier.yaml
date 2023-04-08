@@ -32,7 +32,7 @@ ci:
     choices:
         GitHub CI: github
         None: none
-    default: github
+    default: none
 
 _jinja_extensions:
   - jinja2_time.TimeExtension
