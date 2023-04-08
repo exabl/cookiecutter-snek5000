@@ -1,0 +1,26 @@
+# questions
+author:
+  type: str
+  help: What is your name?
+
+short_name:
+  type: str
+  help: What should we set as a short name for the solver, i.e. prefix for the *.usr.f file etc.?
+
+project_name:
+  type: str
+  help: What is your project name, i.e. name of the repository?
+  default: snek5000-{{short_name}}
+
+package_name:
+  type: str
+  help: What should we name the Python package?
+  default: snek5000_{{short_name}}
+
+description:
+  type: str
+  help: Briefly describe the solver.
+
+year:
+  type: int
+  help: Which year was the project created?

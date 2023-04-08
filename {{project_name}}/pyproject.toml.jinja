@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{package_name}}"
+version = "0.0.1"
+description = "{{description}}"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "{{author}}" }
+]
+keywords = ["Snek5000", "Fluidsim", "Nek5000", "CFD"]
+dependencies = [
+    "snek5000 >= 0.9.0"
+]
+
+[project.entry-points."snek5000.solvers"]
+{{short_name}} = "{{package_name}}.solver"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+{{package_name}} = ["*.usr.f", "*.par.cfg", "Snakefile", "etc/*.yml"]
