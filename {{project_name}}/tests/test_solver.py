@@ -1,6 +1,3 @@
-import pytest
-
-
 def test_init(sim):
     print(sim.info_solver)
     pass

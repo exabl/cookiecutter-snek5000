@@ -1,3 +1,4 @@
+import pytest
 from snek5000 import load_for_restart
 
 
