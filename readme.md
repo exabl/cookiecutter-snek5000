@@ -13,5 +13,5 @@ pipx inject copier jinja2-time
 and then execute
 
 ```sh
-copier gh://snek5000/template-snek5000-solver .
+copier gh://snek5000/template-snek5000-solver /path/to/project
 ```
