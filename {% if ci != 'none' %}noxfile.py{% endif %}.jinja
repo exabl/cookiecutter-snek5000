@@ -31,7 +31,10 @@ if (CWD / "poetry.lock").exists():
     PACKAGE_SPEC = "pyproject.toml"
 else:
     BUILD_SYSTEM = "setuptools"
-    PACKAGE_SPEC = "setup.cfg"
+    if (CWD / "setup.cfg").exists():
+        PACKAGE_SPEC = "setup.cfg"
+    else:
+        PACKAGE_SPEC = "pyproject.toml"
 
 try:
     NEK_SOURCE_ROOT = os.environ["NEK_SOURCE_ROOT"]
