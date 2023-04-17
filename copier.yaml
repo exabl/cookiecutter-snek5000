@@ -47,3 +47,6 @@ _exclude:
   - ".DS_Store"
   - "license.txt"
   - "readme.md"
+
+_tasks:
+  - "mv gitignore .gitignore"
