@@ -31,7 +31,7 @@ tests = [
 where = ["src"]
 
 [tool.setuptools.package-data]
-{{package_name}} = ["*.usr.f", "*.par.cfg", "Snakefile", "etc/*.yml"]
+{{package_name}} = ["*.usr.f", "*.par.cfg", "Snakefile", "etc/*.yml"{{ ', "toolbox/*"' if kth_framework }}]
 
 [tool.coverage.run]
 source = ["{{package_name}}", "./tests"]
